@@ -1,0 +1,13 @@
+<section data-translation="true">
+	<h1>Welcome to uqunie.com</h1>
+	<img src="logo.svg" />
+</section>
+
+<!-- Translation Service -->
+<?php if( OP()->Config('execute')['translation'] ?? false ): ?>
+	<hr/>
+	<section data-t9n="true" data-t9n-locale="en:us">
+		<h1>Translation Service</h1>
+	</section>
+	<div id="op-translate-language-area"></div>
+<?php endif; ?>
