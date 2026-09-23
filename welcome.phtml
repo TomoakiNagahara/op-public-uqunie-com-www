@@ -1,26 +1,258 @@
-<section data-translation="true">
-	<h1>Welcome to uqunie.com</h1>
-</section>
+<?php
+/**	uqunie.com:/welcome.phtml
+ *
+ * @package    uqunie.com
+ * @copyright  uqunie Co., Ltd.
+ */
 
-<section>
-	<h1>NEWS</h1>
-	<section>
-		<h2 data-translation="true">We are establishing a new Hokuriku office</h2>
-		<span class="float right">2026-04-12</span>
-		<p data-translation="true">
-			In preparation for unforeseen incidents such as a major metropolitan earthquake or a fire at our Tokyo headquarters, we have decided to establish a new office in a remote location.
-		</p>
-		<p data-translation="true">
-			We are currently recruiting individuals who are willing to work at the Hokuriku office. If you are interested, please contact us through the inquiry form.
-		</p>
-		<hr/>
-		<h2 data-translation="true">Our website has been renewed</h2>
-		<span class="float right">2026-04-01</span>
-		<p data-translation="true">
-			The ONEPIECE Framework version has been updated from "2024" to "2030".
-		</p>
+/**	Namespace
+ *
+ */
+namespace OP;
+
+//	Register page-owned styles before the layout renders its document head.
+OP()->Unit()->WebPack()->Auto('./css/welcome.css');
+?>
+<div class="uqunie-home" data-translation="true">
+	<nav class="home-nav" aria-label="ページ内ナビゲーション">
+		<a href="#value">uqunieの特徴</a>
+		<a href="#services">事業内容</a>
+		<a href="#work">実績</a>
+		<a href="#engineering">技術方針</a>
+		<a class="home-nav-contact" href="#contact">相談する</a>
+	</nav>
+
+	<section class="hero" aria-labelledby="hero-title">
+		<div class="hero-copy">
+			<p class="eyebrow">TECHNOLOGY × MANAGEMENT</p>
+			<h1 id="hero-title">技術と経営を、<br><em>ひとつの判断に。</em></h1>
+			<p class="hero-statement">
+				「できます」と答えるだけではなく、<br>
+				<strong>何を、どのように、どこまで実現するか</strong>を判断する。
+			</p>
+			<p class="hero-description">
+				uqunieは、事業の目的、予算、運用、技術的な制約を整理し、適切な実現方法を一緒に考えます。
+			</p>
+			<div class="hero-actions">
+				<a class="button button-primary" href="#services">事業内容を見る</a>
+				<a class="button button-secondary" href="#contact">相談の入口を見る</a>
+			</div>
+		</div>
+
+		<aside class="decision-card" aria-label="uqunieの判断領域">
+			<p class="decision-card-label">OUR ROLE</p>
+			<h2>作る前に、判断する。</h2>
+			<ol>
+				<li><span>01</span>目的を明らかにする</li>
+				<li><span>02</span>予算と優先順位を整える</li>
+				<li><span>03</span>実現方法と範囲を選ぶ</li>
+				<li><span>04</span>公開後の運用まで考える</li>
+			</ol>
+		</aside>
 	</section>
-</section>
+
+	<div class="trust-band" aria-label="対応範囲">
+		<p><span>CLIENTS</span>上場企業からスタートアップ・小規模店舗まで</p>
+		<p><span>PHASE</span>新規構築・開発途中・稼働中の引き継ぎ</p>
+		<p><span>SCOPE</span>要件定義から設計・構築・保守・運用まで</p>
+	</div>
+
+	<main>
+		<section class="home-section value-section" id="value" aria-labelledby="value-title">
+			<div class="section-heading">
+				<p class="eyebrow">WHY UQUNIE</p>
+				<h2 id="value-title">「できます」だけでは、<br>答えにならない。</h2>
+				<p>技術的に実現できることが、事業にとって最適とは限りません。目的、費用、期間、運用、リスクを整理し、事業に必要な判断を支援します。</p>
+			</div>
+
+			<div class="value-grid">
+				<article>
+					<p class="card-number">01</p>
+					<h3>経営と技術をつなぐ</h3>
+					<p>経営者には、技術を事業と投資の言葉で。エンジニアとは、設計や運用を技術の言葉で話します。</p>
+				</article>
+				<article>
+					<p class="card-number">02</p>
+					<h3>何を作るべきか考える</h3>
+					<p>要望をそのまま機能へ置き換えず、本当に必要なものと、作らないものを整理します。</p>
+				</article>
+				<article>
+					<p class="card-number">03</p>
+					<h3>予算から範囲を選ぶ</h3>
+					<p>機能を積み上げるだけでなく、限られた予算を効果の高い範囲へ配分します。</p>
+				</article>
+				<article>
+					<p class="card-number">04</p>
+					<h3>完成後まで考える</h3>
+					<p>公開後の保守、変更、担当者の交代、将来の移行まで見据えて設計します。</p>
+				</article>
+			</div>
+		</section>
+
+		<section class="home-section services-section" id="services" aria-labelledby="services-title">
+			<div class="section-heading section-heading-row">
+				<div>
+					<p class="eyebrow">SERVICES</p>
+					<h2 id="services-title">事業の段階に合わせた<br>システム支援</h2>
+				</div>
+				<p>新しく作るときも、途中から引き継ぐときも、公開後に育てるときも。現在地を確認するところから始めます。</p>
+			</div>
+
+			<div class="service-list">
+				<article>
+					<p class="service-index">01 / DEVELOPMENT</p>
+					<h3>Webシステム開発</h3>
+					<p>新しいサービスや業務システムについて、目的と予算の整理から要件定義、設計、構築、公開まで支援します。</p>
+				</article>
+				<article>
+					<p class="service-index">02 / TAKEOVER</p>
+					<h3>既存システムの改善・引き継ぎ</h3>
+					<p>開発途中や稼働中のシステムを調査し、何を残し、何を改善し、どこまで変更するかを判断します。</p>
+				</article>
+				<article>
+					<p class="service-index">03 / OPERATION</p>
+					<h3>保守・運用・継続的な改善</h3>
+					<p>公開をゴールにせず、障害対応、更新、機能追加、運用改善を継続的に支援します。</p>
+				</article>
+			</div>
+		</section>
+
+		<section class="scope-section" aria-labelledby="scope-title">
+			<div class="scope-copy">
+				<p class="eyebrow">BUDGET &amp; SCOPE</p>
+				<h2 id="scope-title">予算に合わせて品質を下げるのではなく、<br><em>実現する範囲を選ぶ。</em></h2>
+				<p>ご予算を伺うのは、価格を合わせるためではありません。事業目的と予算を共有し、限られた条件の中で効果の高い機能と開発段階を一緒に選びます。</p>
+			</div>
+			<div class="scope-options" aria-label="機能選定の分類">
+				<span>今回必須</span><span>今回推奨</span><span>次期対応</span><span>既存サービスで代替</span><span>今回は対象外</span>
+			</div>
+			<div class="scope-levels">
+				<div><strong>01</strong><span>最小構成</span></div>
+				<div><strong>02</strong><span>推奨構成</span></div>
+				<div><strong>03</strong><span>将来の拡張</span></div>
+			</div>
+		</section>
+
+		<section class="home-section work-section" id="work" aria-labelledby="work-title">
+			<div class="section-heading section-heading-row">
+				<div>
+					<p class="eyebrow">EXPERIENCE</p>
+					<h2 id="work-title">事業を支えるシステムを、<br>規模を問わず。</h2>
+				</div>
+				<p>要件定義、設計、構築、保守、運用まで一貫して担当し、現在も継続的な運用を支援しています。</p>
+			</div>
+
+			<div class="work-grid">
+				<article>
+					<p class="work-tag">BOOKING / PAYMENT</p>
+					<h3>予約・決済</h3>
+					<ul><li>小規模レストランの予約システム</li><li>ホテル・航空券の予約・決済を扱う旅行サイト</li></ul>
+				</article>
+				<article>
+					<p class="work-tag">CMS / CONTENT</p>
+					<h3>CMS・コンテンツ配信</h3>
+					<ul><li>大手放送局向けCMS</li><li>Movable Type・PowerCMS・WordPressのカスタマイズ</li><li>購読契約に応じた学術記事の閲覧制御</li></ul>
+				</article>
+				<article class="work-card-featured">
+					<p class="work-tag">E-COMMERCE</p>
+					<h3>EC・オンライン販売</h3>
+					<ul><li>オーダーメイドPCの通販サイト</li><li>商品構成を選択できるカスタム注文</li><li>決済・注文・顧客情報の管理</li></ul>
+				</article>
+				<article>
+					<p class="work-tag">NATIVE APPLICATION</p>
+					<h3>モバイルアプリ連携</h3>
+					<ul><li>iOS・Androidネイティブアプリ</li><li>認証・会員情報・コンテンツのサーバー連携</li></ul>
+				</article>
+			</div>
+		</section>
+
+		<section class="takeover-section" aria-labelledby="takeover-title">
+			<div class="takeover-heading">
+				<p class="eyebrow">START FROM WHERE YOU ARE</p>
+				<h2 id="takeover-title">新規構築だけが、<br>スタート地点ではありません。</h2>
+			</div>
+			<div class="takeover-copy">
+				<p>既存の設計や実装を最初から否定せず、仕様、コード、データ、運用状況を調査します。全面的な作り直しを前提にせず、継続利用、部分改修、段階的な移行を比較します。</p>
+				<ul><li>企画・要件定義からの新規構築</li><li>開発途中のプロジェクト</li><li>完成済み・稼働中のサイト</li><li>仕様書や担当者が不足しているシステム</li></ul>
+				<p class="takeover-quote">作り直せるかではなく、何を残し、何を直し、どこまで変更するか。</p>
+			</div>
+		</section>
+
+		<section class="commerce-section" aria-labelledby="commerce-title">
+			<div>
+				<p class="eyebrow">E-COMMERCE EXPERTISE</p>
+				<h2 id="commerce-title">売る仕組みと、<br>守る仕組みを一緒に考える。</h2>
+			</div>
+			<div>
+				<p>uqunieは、ECサイトの構築を得意としています。商品の掲載と決済だけでなく、商品構成、注文条件、顧客情報、運用フロー、障害時の対応まで含めて設計します。</p>
+				<div class="commerce-keywords"><span>EC</span><span>決済</span><span>個人情報</span><span>予約</span><span>継続運用</span></div>
+			</div>
+		</section>
+
+		<section class="home-section bridge-section" id="engineering" aria-labelledby="bridge-title">
+			<div class="section-heading">
+				<p class="eyebrow">TECHNOLOGY &amp; MANAGEMENT</p>
+				<h2 id="bridge-title">経営者とは事業の話を。<br>エンジニアとは技術の話を。</h2>
+			</div>
+			<div class="audience-grid">
+				<article>
+					<p class="audience-label">FOR MANAGEMENT</p>
+					<h3>経営・マネジメント層へ</h3>
+					<p>技術を、投資効果、運用コスト、リスク、事業継続の観点から説明し、判断に必要な情報へ整理します。</p>
+				</article>
+				<article>
+					<p class="audience-label">FOR ENGINEERS</p>
+					<h3>エンジニア・技術責任者へ</h3>
+					<p>設計上の制約、依存関係、影響範囲、技術的負債を理解し、その背景を失わずに経営判断へつなげます。</p>
+				</article>
+			</div>
+			<div class="oss-note">
+				<p class="eyebrow">OPEN SOURCE</p>
+				<h3>オープンな技術とともに。</h3>
+				<p>目的、保守状況、ライセンス、セキュリティ、移行可能性を確認してOSSを活用し、得られた知見を可能な範囲でコミュニティへ還元します。</p>
+			</div>
+		</section>
+
+		<section class="home-section process-section" aria-labelledby="process-title">
+			<div class="section-heading">
+				<p class="eyebrow">PROCESS</p>
+				<h2 id="process-title">相談から、継続的な改善まで。</h2>
+			</div>
+			<ol class="process-list">
+				<li><span>01</span><strong>目的・予算</strong><small>事業の目的と条件を確認</small></li>
+				<li><span>02</span><strong>現状調査</strong><small>事実と未確認事項を整理</small></li>
+				<li><span>03</span><strong>機能選定</strong><small>優先順位と範囲を決定</small></li>
+				<li><span>04</span><strong>設計・構築</strong><small>実現方法を設計して実装</small></li>
+				<li><span>05</span><strong>検証・公開</strong><small>動作と運用手順を確認</small></li>
+				<li><span>06</span><strong>保守・改善</strong><small>運用しながら継続的に改善</small></li>
+			</ol>
+		</section>
+
+		<section class="home-section news-section" aria-labelledby="news-title">
+			<div class="section-heading section-heading-row">
+				<div><p class="eyebrow">NEWS</p><h2 id="news-title">お知らせ</h2></div>
+			</div>
+			<div class="news-list">
+				<article>
+					<time datetime="2026-04-12">2026.04.12</time>
+					<div><h3>北陸オフィスの新設を進めています</h3><p>首都圏での大規模災害や本社の火災など、不測の事態に備え、遠隔地での拠点開設を進めています。</p></div>
+				</article>
+				<article>
+					<time datetime="2026-04-01">2026.04.01</time>
+					<div><h3>Webサイトをリニューアルしました</h3><p>コーポレートサイトの構成と内容を見直しました。</p></div>
+				</article>
+			</div>
+		</section>
+
+		<section class="contact-section" id="contact" aria-labelledby="contact-title">
+			<p class="eyebrow">CONTACT</p>
+			<h2 id="contact-title">作るものが決まっていなくても、<br>ご相談ください。</h2>
+			<p>目的、予算、現在の課題を伺い、まず何を検討するべきか整理します。</p>
+			<div class="contact-topics"><span>新しいシステム</span><span>予算と実現範囲</span><span>開発途中の引き継ぎ</span><span>稼働中サイトの改善</span><span>EC・予約・決済</span><span>技術的な課題</span></div>
+			<p class="contact-note">お問い合わせ窓口の詳細は、公開前に正式な連絡先と導線を設定します。</p>
+		</section>
+	</main>
+</div>
 <?php
 //	Translation Service
 if( OP()->Config('execute')['translation'] ?? false ){
