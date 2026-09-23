@@ -21,6 +21,10 @@
 		</p>
 	</section>
 </section>
-
-<!-- Translation Service -->
-<?php OP()->Template('translation.phtml') ?>
+<?php
+//	Translation Service
+if( OP()->Config('execute')['translation'] ?? false ){
+	OP()->Template('translation.php');
+	OP()->Template('translation.phtml');
+}
+?>
