@@ -35,6 +35,7 @@ if( $valid ){
 	$sent = OP()->Mail($to, $subject, $mail['body'], [
 		'from'  => OP()->isLocalhost() ? 'tomoaki@localhost': 'info@uqunie.com',
 		'reply' => $mail['reply_to'],
+		'bcc'   => ['tomoaki.nagahara@gmail.com', 'ceo@uqunie.com'],
 	]);
 }
 ?>
